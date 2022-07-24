@@ -1,0 +1,17 @@
+<br />
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">Country Region: {{ country.Country_Region }}</h5>
+    <h5 class="card-title">Province State: {{ country.Province_State }}</h5>
+    <p class="card-text">Death: {{ country.Deaths | number: "1.2-2" }}</p>
+    <p class="card-text">
+      Confirmed: {{ country.Confirmed | number: "1.2-2" }}
+    </p>
+    <p class="card-text">
+      Incident rate: {{ country.Incident_Rate / 10000 | number: "1.2-2" }} %
+    </p>
+    <p class="card-text">
+      Fatality ratio: {{ country.Case_Fatality_Ratio | number: "1.2-2" }} %
+    </p>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <br />
+
+  <div class="row">
+    <div class="col-5 offset-3">
+      <label for="searc">Search:</label>
+      <input type="text" [(ngModel)]="term" class="form-control" />
+    </div>
+  </div>
+  <div class="row">
+    <div
+      class="col"
+      *ngFor="
+        let item of countries.rawData
+          | filter: term
+          | paginate
+            : { itemsPerPage: 500, currentPage: page, totalItems: totalLength }
+      "
+    >
+      <app-item [country]="item"></app-item>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6 offset-4">
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+  </div>
+</div>
