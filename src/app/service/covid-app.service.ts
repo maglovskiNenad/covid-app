@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { elementAt, map, Observable } from 'rxjs';
 import { Countries } from '../model/Countries.model';
 
 const baseUrl = 'https://coronavirus.m.pipedream.net';

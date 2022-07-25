@@ -1,17 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from './core/about/about.component';
-import { HomeComponent } from './core/home/home.component';
 import { MainComponent } from './main/main.component';
+import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
+    path: 'map',
+    component: MapComponent,
   },
   {
     path: 'main',
@@ -19,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/main',
     pathMatch: 'full',
   },
 ];
